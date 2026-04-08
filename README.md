@@ -34,7 +34,7 @@ instagram-reels-downloader
 1. Clone the repository
 
 ```
-git clone https://github.com/your-username/instagram-reels-downloader.git
+git clone https://github.com/pradeepkrsurya01/instagram-reels-downloader.git
 ```
 
 2. Go to project folder
