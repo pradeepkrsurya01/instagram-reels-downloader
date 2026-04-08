@@ -7,6 +7,10 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
 
+app.get("/favicon.ico", (req, res) => {
+    res.status(204).end();
+});
+
 app.post("/download", async (req, res) => {
     const { url } = req.body;
 
@@ -14,18 +18,18 @@ app.post("/download", async (req, res) => {
         const data = await instagramGetUrl(url);
         const video = data.url_list[0];
 
-        res.json({
+        res.status(200).json({
             status: "success",
             video: video
         });
     } catch (error) {
-        res.json({
+        res.status(400).json({
             status: "error",
             message: "Invalid Instagram URL"
         });
     }
 });
 
-app.listen(3000, () => {
-    console.log("Server running on http://localhost:3000");
+app.listen(5500, () => {
+    console.log("Server running on http://localhost:5500");
 });
