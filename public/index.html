@@ -1,24 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Instagram Reels Downloader</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Reels Downloader - Fast & Easy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-download"></i>
+            </div>
+            <h1>Instagram Reels Downloader</h1>
+            <p class="subtitle">Download your favorite Instagram reels instantly</p>
+        </div>
 
-<div class="container">
-<h1>Instagram Downloader</h1>
+        <div class="input-section">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="url" 
+                    placeholder="Paste Instagram Reel Link here..."
+                    autocomplete="off"
+                >
+                <button id="pasteBtn" class="paste-btn" title="Paste from clipboard">
+                    <i class="fas fa-paste"></i>
+                </button>
+            </div>
+            <button id="downloadBtn" class="download-btn">
+                <i class="fas fa-cloud-download-alt"></i>
+                <span>Download</span>
+            </button>
+        </div>
 
-<input type="text" id="url" placeholder="Paste Instagram Reel Link">
+        <div id="result" class="result-section"></div>
 
-<button onclick="download()">Download</button>
+        <div class="footer">
+            <p>⚡ Fast • 🔒 Secure • ✨ No Registration Required</p>
+        </div>
+    </div>
 
-<div id="result"></div>
-
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
 
